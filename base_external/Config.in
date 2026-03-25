@@ -1,0 +1,2 @@
+# Source custom package Config.in files here
+source "$BR2_EXTERNAL_project_base_PATH/package/aesd-assignments/Config.in"
