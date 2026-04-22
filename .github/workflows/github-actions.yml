@@ -9,9 +9,12 @@ jobs:
     full-test:
         container: cuaesd/aesd-autotest:24-assignment5-buildroot
         runs-on: self-hosted
-        timeout-minutes: 120
+        timeout-minutes: 900
         steps:
           - uses: actions/checkout@v2
+            with:
+                fetch-depth: 0
+                submodules: 'recursive'
           - name: Checkout submodules
             run: git submodule update --init --recursive
           - uses: webfactory/ssh-agent@v0.5.3
